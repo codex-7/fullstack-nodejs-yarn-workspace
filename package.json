@@ -12,15 +12,20 @@
     "dev": "concurrently \"yarn dev:api\" \"yarn dev:web\"",
     "dev:api": "yarn workspace api dev",
     "dev:web": "yarn workspace web dev",
-    "prebuild": "rimraf dist"
+    "prebuild": "rimraf build/*",
+    "build": "concurrently \"yarn build:api\" \"yarn build:web\"",
+    "build:api": "yarn workspace api build; cd apps/api; mv dist ../../build/api",
+    "build:web": "yarn workspace web build; cd apps/web; mv dist ../../build/web",
+    "preview": "concurrently \"yarn preview:api\" \"yarn preview:web\"",
+    "preview:api": "node build/api/main",
+    "preview:web": "yarn serve build/web"
   },
   "engines": {
     "node": ">=16.18.x && <= 17.x"
   },
   "workspaces": [
     "apps/*",
-    "packages/*",
-    "shared/*"
+    "packages/*"
   ],
   "devDependencies": {
     "@nestjs/cli": "^9.1.5",
@@ -28,6 +33,7 @@
     "create-vite": "^4.0.0",
     "expo-cli": "^6.0.8",
     "husky": "^8.0.2",
-    "rimraff": "^0.0.1-security"
+    "rimraff": "^0.0.1-security",
+    "serve": "^14.1.2"
   }
 }
