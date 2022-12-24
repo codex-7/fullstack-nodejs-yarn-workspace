@@ -7,6 +7,16 @@
   "author": "0xMahabub <mahabub212002072@gmail.com>",
   "license": "MIT",
   "private": true,
+  "packageManager": "yarn@1.22.19",
+  "scripts": {
+    "dev": "concurrently \"yarn dev:api\" \"yarn dev:web\"",
+    "dev:api": "yarn workspace api dev",
+    "dev:web": "yarn workspace web dev",
+    "prebuild": "rimraf dist"
+  },
+  "engines": {
+    "node": ">=16.18.x && <= 17.x"
+  },
   "workspaces": [
     "apps/*",
     "packages/*",
@@ -17,6 +27,7 @@
     "concurrently": "^7.6.0",
     "create-vite": "^4.0.0",
     "expo-cli": "^6.0.8",
-    "husky": "^8.0.2"
+    "husky": "^8.0.2",
+    "rimraff": "^0.0.1-security"
   }
 }
