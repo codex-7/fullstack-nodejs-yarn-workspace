@@ -1,0 +1,22 @@
+{
+  "name": "@0xm/full-stack",
+  "version": "0.1.0",
+  "description": "A full-stack workspace using yarn and nodejs apps.",
+  "main": "index.js",
+  "repository": "https://github.com/0xMahabub/full-stack-nodejs.git",
+  "author": "0xMahabub <mahabub212002072@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "shared/*"
+  ],
+  "devDependencies": {
+    "@nestjs/cli": "^9.1.5",
+    "concurrently": "^7.6.0",
+    "create-vite": "^4.0.0",
+    "expo-cli": "^6.0.8",
+    "husky": "^8.0.2"
+  }
+}

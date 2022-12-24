@@ -1,0 +1,42 @@
+node_modules
+build
+dist
+output
+
+
+# Environments
+.env
+.env.local
+.env.stage
+.env.prod
+.env.test
+!sample.env
+!.sample.env
+!example.env
+!.example.env
+
+
+# OS related
+.DS_Store
+.exe
+.ini
+.ink
+.msi
+
+# Husky
+.husky/*
+!.husky/pre-commit
+!.husky/post-commit
+!.husky/pre-push
+!.husky/post-push
+
+# IDE
+.vscode/*
+!.vscode/extensios.json
+!.vscode/settings.json
+
+# logs
+.log
+.logs
+*.log
+**/*.log
