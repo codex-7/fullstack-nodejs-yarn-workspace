@@ -40,4 +40,5 @@ build/*
 .log
 .logs
 *.log
+*-error.log
 **/*.log

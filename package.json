@@ -21,7 +21,7 @@
     "preview:web": "yarn serve build/web"
   },
   "engines": {
-    "node": ">=16.18.x && <= 17.x"
+    "node": "16.x"
   },
   "workspaces": [
     "apps/*",
